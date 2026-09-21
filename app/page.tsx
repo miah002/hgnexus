@@ -2,7 +2,8 @@ import Link from "next/link";
 import { CtaLink } from "@/components/cta";
 import { Marquee } from "@/components/marquee";
 import { ProductBand } from "@/components/product-band";
-import { products } from "@/lib/products";
+import { ProductTile } from "@/components/product-tile";
+import { inStock } from "@/lib/products";
 import { site } from "@/lib/site";
 
 const principles = [
@@ -25,20 +26,44 @@ const principles = [
 ];
 
 export default function Home() {
-  const [ps5, coral, ...rest] = products;
+  const live = inStock();
+  // Bands are built around photography — a unit earns one once it has a photo.
+  const featured = live.filter((p) => p.image);
+  const listed = live.filter((p) => !p.image);
 
   return (
     <>
       <Marquee text="ANBERNIC RG DS Plus — first units in the Philippines. Reserve now." />
 
-      <ProductBand product={ps5} tone="dark" priority />
-      <ProductBand product={coral} tone="light" />
+      {featured.map((product, i) => (
+        <ProductBand
+          key={product.slug}
+          product={product}
+          tone={i % 2 === 0 ? "dark" : "light"}
+          priority={i === 0}
+        />
+      ))}
 
-      <div className="grid sm:grid-cols-2">
-        {rest.map((product) => (
-          <ProductBand key={product.slug} product={product} tone="dark" />
-        ))}
-      </div>
+      {listed.length > 0 && (
+        <section className="px-5 py-20 sm:px-8 sm:py-24" aria-labelledby="listed-heading">
+          <div className="flex items-baseline justify-between gap-4">
+            <h2 id="listed-heading" className="text-[11px] tracking-[0.18em] text-steel uppercase">
+              Also in stock
+            </h2>
+            <Link
+              href="/shop"
+              className="text-[11px] text-ash transition-colors duration-200 hover:text-gold"
+            >
+              View all
+            </Link>
+          </div>
+          <div className="mt-8 grid grid-cols-2 gap-x-5 gap-y-10 lg:grid-cols-4">
+            {listed.map((product) => (
+              <ProductTile key={product.slug} product={product} />
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="bg-ash px-5 py-24 text-center sm:px-8 sm:py-32">
         <p className="text-[11px] tracking-[0.18em] text-summit/55 uppercase">
