@@ -1,4 +1,4 @@
-export type Status = "available" | "incoming" | "reserved" | "sold";
+export type Status = "available" | "incoming" | "preorder" | "reserved" | "sold";
 
 export type Product = {
   slug: string;
@@ -23,6 +23,7 @@ export type Product = {
 export const statusLabel: Record<Status, string> = {
   available: "Available",
   incoming: "Arriving this month",
+  preorder: "Order on request",
   reserved: "Reserved",
   sold: "Sold",
 };
@@ -31,6 +32,7 @@ export const statusLabel: Record<Status, string> = {
 export const actionLabel: Record<Status, string> = {
   available: "Buy Now",
   incoming: "Reserve",
+  preorder: "Pre-order",
   reserved: "Reserved",
   sold: "Sold Out",
 };
@@ -217,6 +219,90 @@ export const products: Product[] = [
     warranty: "7-day DOA replacement",
     location: "Santo Tomas, Batangas",
     note: "First units in the country — reserve before they land.",
+  },
+  {
+    slug: "retroid-pocket-duo-lite-4gb",
+    name: "Retroid Pocket Duo Lite",
+    variant: "4GB / 64GB · 5 colourways",
+    category: "Handheld",
+    condition: "Brand new · Sealed · Ordered on request",
+    grade: "New",
+    price: 16000,
+    status: "preorder",
+    image: null,
+    summary:
+      "A tier above the Anbernic: Android 15 on a Snapdragon-class QCS6125 with Adreno 610, hall-effect sticks and active cooling. Dual screens at 5.5 and 4.2 inches, both 60Hz, on a 6,000mAh battery.",
+    specs: [
+      { label: "Displays", value: "5.5-inch primary + 4.2-inch secondary, TFT, 60Hz" },
+      { label: "Chipset", value: "Qualcomm QCS6125 @ 2.0GHz" },
+      { label: "GPU", value: "Adreno 610" },
+      { label: "Memory", value: "4GB RAM / 64GB storage" },
+      { label: "System", value: "Android 15" },
+      { label: "Battery", value: "6,000mAh" },
+      { label: "Controls", value: "Hall-effect sticks, digital L2/R2" },
+      { label: "Cooling", value: "Active" },
+      { label: "Audio", value: "Front-facing stereo speakers, 3.5mm jack" },
+      { label: "Wireless", value: "Wi-Fi 5, Bluetooth 5.0" },
+      { label: "Weight", value: "372g" },
+      { label: "Colourways", value: "GC, 16Bit, Black, Ice Blue, Clear Purple" },
+    ],
+    included: [
+      "Retroid Pocket Duo Lite handheld",
+      "USB-C charging cable",
+      "Manufacturer packaging",
+    ],
+    tested: [
+      "Both displays verified on arrival",
+      "All buttons, sticks and shoulder inputs",
+      "Charging and battery hold",
+      "Wi-Fi and Bluetooth pairing",
+      "Serial number photographed and logged",
+    ],
+    warranty: "7-day DOA replacement",
+    location: "Santo Tomas, Batangas",
+    note: "Ordered once you confirm your colourway. Roughly 2–4 weeks from order to handover — we confirm the current estimate before you pay anything.",
+  },
+  {
+    slug: "retroid-pocket-duo-lite-6gb",
+    name: "Retroid Pocket Duo Lite",
+    variant: "6GB / 128GB · 5 colourways",
+    category: "Handheld",
+    condition: "Brand new · Sealed · Ordered on request",
+    grade: "New",
+    price: 17500,
+    status: "preorder",
+    image: null,
+    summary:
+      "The higher-memory Duo Lite. Same Android 15 platform, hall-effect sticks and dual 60Hz screens, with 6GB of RAM and 128GB of storage — the configuration worth taking if you intend to push past DS-era emulation.",
+    specs: [
+      { label: "Displays", value: "5.5-inch primary + 4.2-inch secondary, TFT, 60Hz" },
+      { label: "Chipset", value: "Qualcomm QCS6125 @ 2.0GHz" },
+      { label: "GPU", value: "Adreno 610" },
+      { label: "Memory", value: "6GB RAM / 128GB storage" },
+      { label: "System", value: "Android 15" },
+      { label: "Battery", value: "6,000mAh" },
+      { label: "Controls", value: "Hall-effect sticks, digital L2/R2" },
+      { label: "Cooling", value: "Active" },
+      { label: "Audio", value: "Front-facing stereo speakers, 3.5mm jack" },
+      { label: "Wireless", value: "Wi-Fi 5, Bluetooth 5.0" },
+      { label: "Weight", value: "372g" },
+      { label: "Colourways", value: "GC, 16Bit, Black, Ice Blue, Clear Purple" },
+    ],
+    included: [
+      "Retroid Pocket Duo Lite handheld",
+      "USB-C charging cable",
+      "Manufacturer packaging",
+    ],
+    tested: [
+      "Both displays verified on arrival",
+      "All buttons, sticks and shoulder inputs",
+      "Charging and battery hold",
+      "Wi-Fi and Bluetooth pairing",
+      "Serial number photographed and logged",
+    ],
+    warranty: "7-day DOA replacement",
+    location: "Santo Tomas, Batangas",
+    note: "Ordered once you confirm your colourway. Roughly 2–4 weeks from order to handover — we confirm the current estimate before you pay anything.",
   },
 ];
 

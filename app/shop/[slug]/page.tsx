@@ -24,7 +24,19 @@ export default async function ProductPage({ params }: Params) {
   const product = getProduct(slug);
   if (!product) notFound();
 
-  const sellable = product.status === "available" || product.status === "incoming";
+  const sellable =
+    product.status === "available" ||
+    product.status === "incoming" ||
+    product.status === "preorder";
+  /** Not yet in our hands, so testing is a promise about arrival, not a record. */
+  const inHand = product.status === "available" || product.status === "reserved";
+
+  const cta =
+    product.status === "preorder"
+      ? "Pre-order via Messenger"
+      : product.status === "incoming"
+        ? "Reserve via Messenger"
+        : "Buy via Messenger";
 
   return (
     <>
@@ -52,9 +64,7 @@ export default async function ProductPage({ params }: Params) {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           {sellable ? (
-            <CtaLink href={site.messenger}>
-              {product.status === "incoming" ? "Reserve via Messenger" : "Buy via Messenger"}
-            </CtaLink>
+            <CtaLink href={site.messenger}>{cta}</CtaLink>
           ) : (
             <StatusPill>{statusLabel[product.status]}</StatusPill>
           )}
@@ -79,7 +89,7 @@ export default async function ProductPage({ params }: Params) {
 
       <section className="px-5 py-24 sm:px-8 sm:py-28">
         <h2 className="text-center text-[11px] tracking-[0.18em] text-steel uppercase">
-          What we tested
+          {inHand ? "What we tested" : "What we check before it ships"}
         </h2>
         <ul className="mx-auto mt-10 max-w-md space-y-3">
           {product.tested.map((item) => (
@@ -148,7 +158,7 @@ export default async function ProductPage({ params }: Params) {
           </p>
           <div className="mt-8">
             <CtaLink href={site.messenger} variant="dark">
-              {product.status === "incoming" ? "Reserve via Messenger" : "Buy via Messenger"}
+              {cta}
             </CtaLink>
           </div>
         </section>

@@ -52,7 +52,7 @@ export default function ShopPage() {
 
       <div className="mt-14 space-y-16">
         <Section id="consoles" heading="Consoles" items={consoles} priority />
-        <Section id="handhelds" heading="Handhelds — Arriving this month" items={handhelds} />
+        <Section id="handhelds" heading="Handhelds" items={handhelds} />
       </div>
 
       <p className="mt-20 max-w-md border-t rule pt-5 text-[13px] leading-relaxed text-steel">
