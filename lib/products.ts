@@ -223,3 +223,8 @@ export const products: Product[] = [
 export function getProduct(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);
 }
+
+/** Grade "New" means sealed stock; everything else is pre-owned. */
+export const isUsed = (p: Product) => p.grade !== "New";
+
+export const inStock = () => products.filter((p) => p.status !== "sold");

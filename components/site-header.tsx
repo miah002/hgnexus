@@ -4,16 +4,16 @@ import { site } from "@/lib/site";
 
 const columns = [
   [
-    { href: "/shop", label: "Shop" },
+    { href: "/shop", label: "New & Sealed" },
     { href: "/shop#handhelds", label: "Handhelds" },
+  ],
+  [
+    { href: "/used", label: "Pre-owned" },
+    { href: "/used#grades", label: "How we grade" },
   ],
   [
     { href: "/sell", label: "We Buy" },
     { href: "/sell#bulk", label: "Bulk Lots" },
-  ],
-  [
-    { href: "/shop#consoles", label: "Consoles" },
-    { href: site.messenger, label: "Contact" },
   ],
 ];
 
@@ -54,7 +54,13 @@ export function SiteHeader() {
             href="/shop"
             className="text-[11px] text-steel transition-colors duration-200 hover:text-ash sm:hidden"
           >
-            Shop
+            New
+          </Link>
+          <Link
+            href="/used"
+            className="text-[11px] text-steel transition-colors duration-200 hover:text-ash sm:hidden"
+          >
+            Used
           </Link>
           <Link
             href="/sell"

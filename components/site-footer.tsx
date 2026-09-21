@@ -16,9 +16,9 @@ export function SiteFooter() {
 
         <ul className="space-y-1.5 text-[11px]">
           {[
-            { href: "/shop", label: "Shop" },
-            { href: "/shop#consoles", label: "Consoles" },
-            { href: "/shop#handhelds", label: "Handhelds" },
+            { href: "/shop", label: "New & Sealed" },
+            { href: "/used", label: "Pre-owned" },
+            { href: "/used#grades", label: "How we grade" },
             { href: "/sell", label: "We Buy" },
           ].map((item) => (
             <li key={item.label}>
