@@ -52,7 +52,7 @@ export const products: Product[] = [
     grade: "B",
     price: 35000,
     status: "available",
-    image: null,
+    image: "/products/ps5-disc.jpg",
     summary:
       "Launch-model disc edition. Sony stops manufacturing game discs in January 2028, which makes a working disc drive the only route to physical games — and this is the generation that still has one.",
     specs: [
