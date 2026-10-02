@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* HIGHGROUNDS* brand palette */
+  /* HIGHGROUNDS+ NEXUS brand palette */
   --color-summit: #0e1214;
   --color-panel: #1c2429;
   --color-gold: #c9a227;
@@ -12,6 +12,7 @@
   --color-mist: #e6e6e2;
 
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-brush: var(--font-hg-brush), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -32,6 +33,13 @@
     outline: 2px solid var(--color-gold);
     outline-offset: 2px;
     border-radius: 2px;
+  }
+
+  /* Single-weight face: never let the browser fake a bold or italic. Its lowercase is a
+     smaller small-cap form, so headlines are set in capitals to get the designed letters. */
+  .font-brush {
+    font-synthesis: none;
+    text-transform: uppercase;
   }
 
   ::selection {

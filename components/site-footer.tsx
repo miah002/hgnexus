@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/logo";
 import { site } from "@/lib/site";
 
 export function SiteFooter() {
@@ -6,12 +7,7 @@ export function SiteFooter() {
     <footer className="border-t rule px-5 py-14 sm:px-8">
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <Link href="/" aria-label={`${site.name} home`} className="leading-none">
-          <span className="font-display text-xs font-bold tracking-[0.18em] text-ash">
-            HIGHGROUNDS
-          </span>
-          <span className="font-display text-xs font-bold text-gold" aria-hidden="true">
-            *
-          </span>
+          <Logo className="h-9" />
         </Link>
 
         <ul className="space-y-1.5 text-[11px]">

@@ -1,5 +1,5 @@
 export const site = {
-  name: "HIGHGROUNDS*",
+  name: "HIGHGROUNDS+ NEXUS",
   tagline: "Tested. Warranted. Delivered.",
   description:
     "Tested pre-owned and brand new consoles, handhelds, laptops and PC parts. Every unit bench-tested, graded and warranted before it ships.",

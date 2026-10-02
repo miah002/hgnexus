@@ -69,7 +69,7 @@ export default function Home() {
         <p className="text-[11px] tracking-[0.18em] text-summit/55 uppercase">
           Tested. Warranted. Delivered.
         </p>
-        <h1 className="mx-auto mt-5 max-w-2xl font-display text-3xl font-medium tracking-tight text-summit sm:text-4xl">
+        <h1 className="mx-auto mt-5 max-w-2xl font-brush text-4xl leading-tight text-summit sm:text-5xl">
           Buying used tech online should not be a gamble.
         </h1>
         <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed text-summit/70">
@@ -120,7 +120,7 @@ export default function Home() {
         <p className="text-[11px] tracking-[0.18em] text-steel uppercase">Working or not</p>
         <h2
           id="buyback-heading"
-          className="mx-auto mt-5 max-w-2xl font-display text-3xl font-medium tracking-tight text-ash sm:text-4xl"
+          className="mx-auto mt-5 max-w-2xl font-brush text-4xl leading-tight text-ash sm:text-5xl"
         >
           We buy your old tech.
         </h2>

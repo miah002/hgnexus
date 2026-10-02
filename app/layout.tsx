@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -17,6 +18,13 @@ const inter = Inter({
   display: "swap",
 });
 
+// Display only: traced from the brand specimen, so it is soft below ~36px.
+const brush = localFont({
+  src: "./fonts/HGNexus-Brush.ttf",
+  variable: "--font-hg-brush",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: `${site.name} — ${site.tagline}`,
@@ -29,8 +37,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${spaceGrotesk.variable} ${inter.variable} min-h-screen`}>
+    // Variables must live on <html>: the theme tokens in globals.css resolve at :root,
+    // where anything defined on <body> is invisible and the whole chain silently falls back.
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${brush.variable}`}>
+      <body className="min-h-screen">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-ash focus:px-4 focus:py-3 focus:text-sm focus:font-medium focus:text-summit"

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/logo";
 import { products } from "@/lib/products";
 import { site } from "@/lib/site";
 
@@ -24,12 +25,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 bg-summit/95 backdrop-blur-sm">
       <div className="flex items-start justify-between gap-6 px-5 py-5 sm:px-8">
         <Link href="/" aria-label={`${site.name} home`} className="shrink-0 leading-none">
-          <span className="font-display text-xs font-bold tracking-[0.18em] text-ash">
-            HIGHGROUNDS
-          </span>
-          <span className="font-display text-xs font-bold text-gold" aria-hidden="true">
-            *
-          </span>
+          <Logo className="h-9" priority />
         </Link>
 
         <nav aria-label="Main" className="hidden flex-1 justify-center gap-12 sm:flex lg:gap-24">

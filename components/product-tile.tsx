@@ -15,16 +15,16 @@ export function ProductTile({
       <Link href={`/shop/${product.slug}`} className="group block">
         <ProductTileMedia product={product} priority={priority} />
 
-        <div className="mt-3 flex items-start justify-between gap-3">
+        <div className="mt-3 flex flex-col gap-1.5 sm:flex-row sm:items-start sm:justify-between sm:gap-3">
           <div className="min-w-0">
-            <p className="truncate text-[13px] text-ash transition-colors duration-200 group-hover:text-gold">
+            <p className="text-[13px] text-ash transition-colors duration-200 group-hover:text-gold sm:truncate">
               {product.name}
             </p>
             <p className="mt-0.5 text-[11px] text-steel">{product.variant}</p>
             <p className="mt-1.5 text-[13px] text-ash tabular-nums">{peso(product.price)}</p>
           </div>
 
-          <p className="shrink-0 text-right text-[11px] text-steel">
+          <p className="text-[11px] text-steel sm:shrink-0 sm:text-right">
             {statusLabel[product.status]}
           </p>
         </div>
