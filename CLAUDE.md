@@ -178,8 +178,9 @@ the page looks right.
 
 ## Current state
 
-Live inventory: one pre-owned PS5 (photographed), three sealed Anbernic RG DS Plus, two Retroid
-Pocket Duo Lite configurations. Six units, five without photos.
+Live inventory: one pre-owned PS5 (photographed) and three sealed Anbernic RG DS Plus. The two
+Retroid Pocket Duo Lite listings are placeholders for stock that has not been purchased. Six
+listings, five without photos.
 
 **`lib/products.ts` is known to be stale. The owner has said to hold changes — do not edit
 prices, status or specs without an explicit instruction.** What is wrong, for when they say go:
@@ -187,11 +188,14 @@ prices, status or specs without an explicit instruction.** What is wrong, for wh
 - **Anbernic RG DS Plus ×3** — listed at ₱9,500 and `incoming`. The units are now in hand and the
   owner has decided on ₱7,500 (the official local seller lists at ₱8,000; landed cost was ₱6,510
   per unit). Status becomes `available`.
-- **Retroid** — the listings describe the base Duo Lite (4GB/64GB at ₱16,000 and 6GB/128GB at
-  ₱17,500). What the owner actually ordered is the **Duo Lite Plus, 8GB/128GB**: Dragonwing Q-7790
-  with Adreno 722, Android 16, Wi-Fi 6E, Bluetooth 5.4, 27W charging. Landed cost is roughly
-  ₱15,000–16,000 per unit and the suggested price was about ₱20,000. The listings should be replaced,
-  one per colourway (they are one-of-one), not edited. Quantity (3 or 5) is not settled.
+- **Retroid** — **nothing has been bought.** The two listings are order-on-request placeholders
+  for the base Duo Lite (4GB/64GB at ₱16,000 and 6GB/128GB at ₱17,500), not inventory. The model
+  the owner is weighing is the **Duo Lite Plus, 8GB/128GB**: Dragonwing Q-7790 with Adreno 722,
+  Android 16, Wi-Fi 6E, Bluetooth 5.4, 27W charging, $199 with code LITEPLUS (valid to 31 Oct
+  2026; pre-orders ship mid-November). If bought, landed cost would be roughly ₱15,000–16,000 per
+  unit against a suggested ~₱20,000. Reviewers rate the base Lite's chip as too slow even for DS
+  emulation, so it should not be listed as a main product. If the Plus is bought, replace the
+  listings (one per colourway, since they are one-of-one) rather than editing them.
 
 **Brand open question:** the specimen is monochrome, so the palette above was not part of the
 rebrand. It is unchanged; confirm with the owner before altering it.
